@@ -15,7 +15,8 @@
     <body>
         <h1>Manage Users</h1>
         <h3>${message}</h3>
-        <table border="1">
+        <c:if test="${users.size() gt 0}">
+            <table border="1">
             <tr style="text-align:center; font-weight: bold">
                 <td>Email</td>
                 <td>First Name</td>
@@ -24,6 +25,7 @@
                 <td></td>
                 <td></td>
             </tr>
+        </c:if>
             <c:forEach items="${users}" var="user">
                 <tr>
                     <td name="email">${user.email}</td>
